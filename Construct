@@ -1,22 +1,48 @@
-Public List<> findCompatible(int[][] intervals) {
-  List<> optimalSchedule = new ArrayList<>();
-  Arrays.sort(intervals, new TwoDimArrayComparator()); // sort by finish time
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
-  // It contains the end time of current interval
-  int lastScheduledIntervalFinish = Integer.MIN_VALUE;
+public class projecttest {
 
-  // Iterate through all the intervals
-  for (int[] interval: intervals) {
-    int start = interval[0];
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-    // Case when new interval is to formed
-    if (start >= lastScheduledIntervalFinish) 
-      int end = interval[1];
+	}
+}
+	
+	
+	class Solution {
+		  public List<int[]> constructOptimalSchedule(int[][] intervals) {
 
-      optimalSchedule.add(interval);
-      lastScheduledIntervalFinish = end;
-    }
-  }
+		    // Create a 2D Array for storing the answer
+		    List<int[]> optimalSchedule = new ArrayList<>();
+		    Arrays.sort(intervals, new TwoDimArrayComparator()); // sort by finish time
 
-  return optimalSchedule;
- }
+		    // It contains the end time of current interval
+		    int lastScheduledIntervalFinish = Integer.MIN_VALUE;
+
+		    // Iterate through all the intervals
+		    for (int[] interval: intervals) {
+		      int start = interval[0];
+
+		      // Case when new interval is to formed
+		      if (start >= lastScheduledIntervalFinish) {
+		        int end = interval[1];
+
+		        optimalSchedule.add(interval);
+		        lastScheduledIntervalFinish = end;
+		      }
+		    }
+
+		    return optimalSchedule;
+		  }
+
+		  // Helper Function to
+		  // Sort the intervals in increasing order by end time
+		  class TwoDimArrayComparator implements Comparator<int[]> {
+		    public int compare(int[] a, int[] b) {
+		      return a[1] - b[1];
+		    }
+		  }
+	}
