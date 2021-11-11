@@ -1,0 +1,22 @@
+Public List<> findCompatible(int[][] intervals) {
+  List<> optimalSchedule = new ArrayList<>();
+  Arrays.sort(intervals, new TwoDimArrayComparator()); // sort by finish time
+
+  // It contains the end time of current interval
+  int lastScheduledIntervalFinish = Integer.MIN_VALUE;
+
+  // Iterate through all the intervals
+  for (int[] interval: intervals) {
+    int start = interval[0];
+
+    // Case when new interval is to formed
+    if (start >= lastScheduledIntervalFinish) 
+      int end = interval[1];
+
+      optimalSchedule.add(interval);
+      lastScheduledIntervalFinish = end;
+    }
+  }
+
+  return optimalSchedule;
+ }
