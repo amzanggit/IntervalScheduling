@@ -6,7 +6,7 @@ CS430 Group Project
 
 
 <h2>Motivation</h2>
-For this project, we are given the task to return the schedule of compatibles jobs that m machines can be assigned to complete. Our goal is trying to achieve the maximum productivity and sufficiency by getting as many jobs assigned to machines as possible. 
+For this project, we are given the task to return the schedule of compatible jobs that m machines can be assigned to complete. Our goal is trying to achieve the maximum productivity and sufficiency by getting as many jobs assigned to machines as possible. 
 
 
 <h2>Code Style</h2>
