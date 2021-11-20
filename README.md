@@ -13,7 +13,7 @@ For this project, we are given the task to return the schedule of compatibles jo
 We implement the algorithm in <Strong>Java</Strong> coding. We choose <Strong>TreeSet</Strong> as the data structure storing job intervals. 
 
 <h2>How to use?</h2>
-We implement a <Strong>readFile</Strong> method in our code so the code can read any <Strong>TXT file</Strong> with the total number of machines and each job's start and finish time. The code generates the final schedule automatically and return the TreeSet of job intervals with assignmed machines. 
+We implement a <Strong>readFile</Strong> method in our code so the code can read any <Strong>TXT file</Strong> with the total number of machines and each job's start and finish time. The code generates the final schedule automatically and return the TreeSet of job intervals with assigned machines. 
 
 
 <h2>Contribute</h2>
